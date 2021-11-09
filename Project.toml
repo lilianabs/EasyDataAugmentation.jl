@@ -1,0 +1,13 @@
+name = "EasyDataAugmentationNLP"
+uuid = "e61a173e-ad15-48e9-b67e-b7ba7e27ef44"
+authors = ["lilianabs <lilianabsmath@google.com> and contributors"]
+version = "0.1.0"
+
+[compat]
+julia = "1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
