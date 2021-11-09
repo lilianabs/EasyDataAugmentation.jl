@@ -2,5 +2,7 @@ using EasyDataAugmentationNLP
 using Test
 
 @testset "EasyDataAugmentationNLP.jl" begin
-    # Write your tests here.
+    sentence = "Hello world!"
+    word = "world"
+    @test EasyDataAugmentationNLP.substitute_word(sentence, word) == "Hello !"
 end

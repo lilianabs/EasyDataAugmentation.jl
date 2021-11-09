@@ -1,5 +1,6 @@
 module EasyDataAugmentationNLP
 
-# Write your package code here.
+export substite_string
+include("random_deletion.jl")
 
 end
