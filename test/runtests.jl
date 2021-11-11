@@ -1,7 +1,7 @@
-using EasyDataAugmentationNLP
+using EasyDataAugmentation
 using Test
 
-@testset "EasyDataAugmentationNLP.jl" begin
+@testset "EasyDataAugmentation.jl" begin
     sentence = "Hello world!"
     word = "world"
     @test EasyDataAugmentationNLP.substitute_word(sentence, word) == "Hello !"
