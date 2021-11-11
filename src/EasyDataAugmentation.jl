@@ -1,4 +1,4 @@
-module EasyDataAugmentationNLP
+module EasyDataAugmentation
 
 export substite_string
 include("random_deletion.jl")
