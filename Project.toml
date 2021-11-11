@@ -1,4 +1,4 @@
-name = "EasyDataAugmentationNLP"
+name = "EasyDataAugmentation"
 uuid = "e61a173e-ad15-48e9-b67e-b7ba7e27ef44"
 authors = ["lilianabs <lilianabsmath@google.com> and contributors"]
 version = "0.1.0"
