@@ -1,4 +1,4 @@
-# EasyDataAugmentationNLP
+# EasyDataAugmentation
 
 [![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://lilianabs.github.io/EasyDataAugmentationNLP.jl/stable)
 [![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://lilianabs.github.io/EasyDataAugmentationNLP.jl/dev)
