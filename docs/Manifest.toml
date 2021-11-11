@@ -28,7 +28,7 @@ git-tree-sha1 = "f425293f7e0acaf9144de6d731772de156676233"
 uuid = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
 version = "0.27.10"
 
-[[EasyDataAugmentationNLP]]
+[[EasyDataAugmentation]]
 path = ".."
 uuid = "e61a173e-ad15-48e9-b67e-b7ba7e27ef44"
 version = "0.1.0"

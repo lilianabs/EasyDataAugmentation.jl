@@ -1,14 +1,14 @@
 ```@meta
-CurrentModule = EasyDataAugmentationNLP
+CurrentModule = EasyDataAugmentation
 ```
 
-# EasyDataAugmentationNLP
+# EasyDataAugmentation
 
-Documentation for [EasyDataAugmentationNLP](https://github.com/lilianabs/EasyDataAugmentationNLP.jl).
+Documentation for [EasyDataAugmentation](https://github.com/lilianabs/EasyDataAugmentation.jl).
 
 ```@index
 ```
 
 ```@autodocs
-Modules = [EasyDataAugmentationNLP]
+Modules = [EasyDataAugmentation]
 ```

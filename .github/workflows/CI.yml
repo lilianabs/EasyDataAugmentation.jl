@@ -63,6 +63,6 @@ jobs:
       - run: |
           julia --project=docs -e '
             using Documenter: DocMeta, doctest
-            using EasyDataAugmentationNLP
-            DocMeta.setdocmeta!(EasyDataAugmentationNLP, :DocTestSetup, :(using EasyDataAugmentationNLP); recursive=true)
-            doctest(EasyDataAugmentationNLP)'
+            using EasyDataAugmentation
+            DocMeta.setdocmeta!(EasyDataAugmentation, :DocTestSetup, :(using EasyDataAugmentation); recursive=true)
+            doctest(EasyDataAugmentation)'

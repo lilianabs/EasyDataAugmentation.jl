@@ -1,16 +1,16 @@
-using EasyDataAugmentationNLP
+using EasyDataAugmentation
 using Documenter
 
-DocMeta.setdocmeta!(EasyDataAugmentationNLP, :DocTestSetup, :(using EasyDataAugmentationNLP); recursive=true)
+DocMeta.setdocmeta!(EasyDataAugmentation, :DocTestSetup, :(using EasyDataAugmentation); recursive=true)
 
 makedocs(;
-    modules=[EasyDataAugmentationNLP],
+    modules=[EasyDataAugmentation],
     authors="lilianabs <lilianabsmath@google.com> and contributors",
-    repo="https://github.com/lilianabs/EasyDataAugmentationNLP.jl/blob/{commit}{path}#{line}",
-    sitename="EasyDataAugmentationNLP.jl",
+    repo="https://github.com/lilianabs/EasyDataAugmentation.jl/blob/{commit}{path}#{line}",
+    sitename="EasyDataAugmentation.jl",
     format=Documenter.HTML(;
         prettyurls=get(ENV, "CI", "false") == "true",
-        canonical="https://lilianabs.github.io/EasyDataAugmentationNLP.jl",
+        canonical="https://lilianabs.github.io/EasyDataAugmentation.jl",
         assets=String[],
     ),
     pages=[
@@ -19,6 +19,6 @@ makedocs(;
 )
 
 deploydocs(;
-    repo="github.com/lilianabs/EasyDataAugmentationNLP.jl",
+    repo="github.com/lilianabs/EasyDataAugmentation.jl",
     devbranch="main",
 )
