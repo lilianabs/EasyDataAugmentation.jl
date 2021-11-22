@@ -1,6 +1,8 @@
 module EasyDataAugmentation
 
 export substite_string
-include("random_deletion.jl")
+export easy_data_augmentation
+
+include("generate_augmented_sentences.jl")
 
 end
