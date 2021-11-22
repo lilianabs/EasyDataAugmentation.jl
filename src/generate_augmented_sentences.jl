@@ -6,7 +6,9 @@ function easy_data_augmentation(input_file)
 
     open(input_file) do f
         for (i, line) in enumerate(eachline(f))
-            print("Line $i: $line \n")
+            label, text = split(line, "\t")
+            tokens = split(text, " ")
+            println("Line $i: $label, $text, $tokens")
         end
     end
 
