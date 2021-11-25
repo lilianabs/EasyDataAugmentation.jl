@@ -7,5 +7,6 @@ using Test
     @test EasyDataAugmentation.substitute_word(sentence, word) == "Hello !"
 
     input_file = "../data/sst2_train_500.txt"
-    @test EasyDataAugmentation.easy_data_augmentation(input_file) == input_file
+    output_file = "../data/output.txt"
+    @test EasyDataAugmentation.easy_data_augmentation(input_file, output_file) == input_file
 end
