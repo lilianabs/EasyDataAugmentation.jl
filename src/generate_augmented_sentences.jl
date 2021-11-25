@@ -15,7 +15,10 @@ function easy_data_augmentation(input_file, output_file)
     for line in lines
         label, sentence = split(line, "\t")
         println("$label $sentence")
-        push!(augmented_sentences, sentence)
+        # augmented_sentences = augment_sentence()
+        #for augmented_sentence in augmented_sentences 
+        line_to_write = label * "\t" * sentence
+        push!(augmented_sentences, line_to_write)
         
      end
 
