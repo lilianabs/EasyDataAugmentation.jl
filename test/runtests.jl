@@ -8,5 +8,6 @@ using Test
 
     input_file = "../data/sst2_train_500.txt"
     output_file = "../data/output.txt"
-    @test EasyDataAugmentation.easy_data_augmentation(input_file, output_file) == input_file
+    @test EasyDataAugmentation.easy_data_augmentation(input_file, output_file) == output_file
+    @test isfile(output_file)
 end
