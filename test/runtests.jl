@@ -10,4 +10,13 @@ using Test
     output_file = "../data/output.txt"
     @test EasyDataAugmentation.easy_data_augmentation(input_file, output_file) == output_file
     @test isfile(output_file)
+
+    sentence = "Try' cleanInNG This` SENTENCE"
+    clean_sentence = "try cleaninng this sentence"
+    @test EasyDataAugmentation.clean_text_sentence(sentence) == clean_sentence
+
+    sentence = "Try' cleanInNG This`            SENTENCE"
+    clean_sentence = "try cleaninng this sentence"
+    @test EasyDataAugmentation.clean_text_sentence(sentence) == clean_sentence
+
 end

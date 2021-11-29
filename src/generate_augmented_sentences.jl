@@ -28,6 +28,8 @@ end
 
 
 function augment_sentence(sentence)
+
+    sentence = clean_text_sentence(sentence)
     words = split(sentence, " ")
 
     return ["test1", "test2"]
@@ -36,4 +38,10 @@ end
 
 function clean_text_sentence(sentence)
 
+    sentence = lowercase.(sentence)
+    sentence = replace.(sentence, ['’',''', '`'] => "")
+
+    # remove extra spaces
+    sentence = replace.(sentence, r" +" => " ")
+    return sentence
 end
