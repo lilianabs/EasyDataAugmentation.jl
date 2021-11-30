@@ -19,4 +19,12 @@ using Test
     clean_sentence = "try cleaninng this sentence"
     @test EasyDataAugmentation.clean_text_sentence(sentence) == clean_sentence
 
+    sentence = "Try' cle@nInNG!        This` SENTENCE \n That SENTENCE"
+    clean_sentence = "try cleninng this sentence that sentence"
+    @test EasyDataAugmentation.clean_text_sentence(sentence) == clean_sentence
+
+    sentence = " clean THIS SENTENCE @·"
+    clean_sentence = "clean this sentence"
+    @test EasyDataAugmentation.clean_text_sentence(sentence) == clean_sentence
+
 end

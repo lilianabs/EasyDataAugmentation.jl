@@ -1,5 +1,18 @@
 using DelimitedFiles
 
+const special_characters = ['[', '!', '&', ''',
+                            '(', ')', '*', ',', 
+                            '.', '/', ':', '$',
+                            ';', '?', '@', '[',
+                            '\\', ']', '^', '_', 
+                            '`', '{', '|', '}',
+                            '·'
+                            ]
+
+const spaces = ['-', '\t', '\n']
+
+const alphanumeric_characters = r"[^A-Za-z0-9 ]+"
+
 function substitute_word(sentence, word)
     return replace(sentence, word => "")
 end
@@ -39,9 +52,20 @@ end
 function clean_text_sentence(sentence)
 
     sentence = lowercase.(sentence)
-    sentence = replace.(sentence, ['’',''', '`'] => "")
 
-    # remove extra spaces
+    # delete special characters
+    sentence = replace.(sentence, special_characters => "")
+    # add spaces for tab and return
+    sentence = replace.(sentence, spaces => " ")
+    # keep alphanumeric characters
+    #sentence = match.(alphanumeric_characters, sentence)
+
+    # remove extra white spaces
     sentence = replace.(sentence, r" +" => " ")
+
+    # remove trailing white space
+    sentence = lstrip.(sentence)
+    sentence = rstrip.(sentence)
+
     return sentence
 end
