@@ -17,12 +17,14 @@ function substitute_word(sentence, word)
     return replace(sentence, word => "")
 end
 
-function easy_data_augmentation(input_file, output_file)
+function easy_data_augmentation(input_file, output_file, alpha_sr=0.1, 
+    alpha_ri=0.1, alpha_rs=0.1, p_rd=0.1, num_aug=9)
 
     f = open(input_file)
     lines = readlines(f)
 
     augmented_sentences = []
+    num_aug_sentences_per_technique = floor(num_aug/4)+1
 
     # for each line in the input file, we generate agumented sentences
     for line in lines
@@ -44,8 +46,8 @@ function augment_sentence(sentence)
 
     sentence = clean_text_sentence(sentence)
     words = split(sentence, " ")
-
-    return ["test1", "test2"]
+    
+    return words
 
 end
 
@@ -63,7 +65,7 @@ function clean_text_sentence(sentence)
     # remove extra white spaces
     sentence = replace.(sentence, r" +" => " ")
 
-    # remove trailing white space
+    # remove trailing and ending white space
     sentence = lstrip.(sentence)
     sentence = rstrip.(sentence)
 
