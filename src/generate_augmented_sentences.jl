@@ -1,4 +1,5 @@
 using DelimitedFiles
+using WordNet
 
 const special_characters = ['[', '!', '&', ''',
                             '(', ')', '*', ',', 
@@ -71,3 +72,11 @@ function clean_text_sentence(sentence)
 
     return sentence
 end
+
+function get_synonyms(word)
+    db = DB()
+    lemma = db['a', "glad"]
+    ss = synsets(db, lemma)
+
+    return ss
+end 
